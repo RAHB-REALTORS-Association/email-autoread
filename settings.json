@@ -1,0 +1,10 @@
+{
+    "ai_model": "gpt-3.5-turbo",
+    "scopes": ["https://www.googleapis.com/auth/gmail.modify"],
+    "credentials": "credentials.json",
+    "max_tokens": 60,
+    "prompt_template": "Review the following email and determine if it's junk or not. Junk emails typically try to sell something or get the reader to sign up for something, and are likely not authored and sent by a live human being: {email_body}",
+    "local_server": "http://localhost:1234/v1/chat/completions",
+    "system_prompt": "You are a helpful assistant tasked with filtering out junk emails.",
+    "sleep_time": 3600
+}
