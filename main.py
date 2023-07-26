@@ -79,8 +79,12 @@ def main():
 
                             # If a label is specified in the settings, apply it
                             if "label" in config and config["label"]:
-                                email_handler.apply_label(gmail_service, 'me', email_data['Id'], config["label"])
-                                logging.info(f"Applied label to email {email_data['Id']}")
+                                label_id = email_handler.get_label_id(gmail_service, 'me', config["label"])
+                                if label_id is not None:
+                                    email_handler.apply_label(gmail_service, 'me', email_data['Id'], label_id)
+                                    logging.info(f"Applied label to email {email_data['Id']}")
+                                else:
+                                    logging.error(f"Label {config['label']} not found.")
                     except Exception as e:
                         logging.error(f"Error processing email: {e}")
 
