@@ -65,18 +65,25 @@ def main():
                             config["local_server"],
                             config["system_prompt"]
                         )
+
+                        # Log the AI response
+                        logging.info(f"AI response for email {email_data['Id']}: {is_junk}")
+
                         if is_junk is None:
                             continue
 
                         # If the email is junk, mark it as read
                         if is_junk:
                             email_handler.mark_read(gmail_service, 'me', email_data['Id'])
+                            logging.info(f"Marked email {email_data['Id']} as read")
 
                             # If a label is specified in the settings, apply it
                             if "label" in config and config["label"]:
                                 email_handler.apply_label(gmail_service, 'me', email_data['Id'], config["label"])
+                                logging.info(f"Applied label to email {email_data['Id']}")
                     except Exception as e:
                         logging.error(f"Error processing email: {e}")
+
             except Exception as e:
                 logging.error(f"Error fetching emails: {e}")
             # Sleep for a given period specified in the configuration

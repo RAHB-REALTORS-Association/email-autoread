@@ -38,7 +38,7 @@ def generate_response(email_data, model, max_tokens, prompt_template, local_serv
             response_content = response['choices'][0]['message']['content']
 
         # Prepare the response data
-        is_junk = response_content.lower().startswith('yes')
+        is_junk = response_content.strip().startswith('Yes')
 
         return is_junk
     except Exception as e:
