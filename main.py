@@ -71,6 +71,10 @@ def main():
                         # If the email is junk, mark it as read
                         if is_junk:
                             email_handler.mark_read(gmail_service, 'me', email_data['Id'])
+
+                            # If a label is specified in the settings, apply it
+                            if "label" in config and config["label"]:
+                                email_handler.apply_label(gmail_service, 'me', email_data['Id'], config["label"])
                     except Exception as e:
                         logging.error(f"Error processing email: {e}")
             except Exception as e:

@@ -51,3 +51,14 @@ def mark_read(service, user_id, email_id):
         logging.info(f'Email id: {email_id} marked as read.')
     except HttpError as error:
         logging.error(f'An error occurred: {error}')
+
+def apply_label(service, user_id, email_id, label):
+    try:
+        # Create a dictionary with the labelIds
+        label_object = {'addLabelIds': [label]}
+
+        # Use the Gmail API to apply the label
+        service.users().messages().modify(userId=user_id, id=email_id, body=label_object).execute()
+        print(f"Label applied to email {email_id}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
