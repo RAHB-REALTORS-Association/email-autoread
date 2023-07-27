@@ -63,7 +63,8 @@ def main():
                             config["max_tokens"],
                             config["prompt_template"],
                             config["local_server"],
-                            config["system_prompt"]
+                            config["system_prompt"],
+                            config["positive_response"]
                         )
 
                         # Log the AI response
