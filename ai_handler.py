@@ -6,7 +6,7 @@ import logging
 # Set up logging
 logging.basicConfig(filename='app.log', filemode='a', format='%(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-def generate_response(email_data, model, max_tokens, prompt_template, local_server, system_prompt):
+def generate_response(email_data, model, max_tokens, prompt_template, local_server, system_prompt, positive_response):
     prompt = prompt_template.format(email_body=email_data['Body'])
 
     try:
@@ -38,7 +38,7 @@ def generate_response(email_data, model, max_tokens, prompt_template, local_serv
             response_content = response['choices'][0]['message']['content']
 
         # Prepare the response data
-        is_junk = response_content.strip().startswith('Yes')
+        is_junk = response_content.strip().startswith(positive_response)
 
         return is_junk
     except Exception as e:
