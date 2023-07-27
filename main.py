@@ -25,10 +25,11 @@ def main():
         # Parse command-line arguments
         parser = argparse.ArgumentParser(description='Run Email Auto-reader.')
         parser.add_argument('--local', action='store_true', help='Use the local AI model.')
+        parser.add_argument('--try-local', action='store_true', help='Try using the local AI model first.')
         args = parser.parse_args()
 
-        # If the --local flag is set, override the USE_LOCAL environment variable
-        if args.local:
+        # If the --local or --try-local flag is set, override the USE_LOCAL environment variable
+        if args.local or args.try_local:
             os.environ['USE_LOCAL'] = 'true'
 
         # Load config
