@@ -1,4 +1,4 @@
-[![Docker Image](https://github.com/RAHB-REALTORS-Association/email-autoread/actions/workflows/docker-image.yml/badge.svg)](https://github.com/RAHB-REALTORS-Association/email-autoread/actions/workflows/docker-image.yml)
+[![Continuous Integration](https://github.com/RAHB-REALTORS-Association/email-autoread/actions/workflows/python-app.yml/badge.svg)](https://github.com/RAHB-REALTORS-Association/email-autoread/actions/workflows/python-app.yml)[![Docker Image](https://github.com/RAHB-REALTORS-Association/email-autoread/actions/workflows/docker-image.yml/badge.svg)](https://github.com/RAHB-REALTORS-Association/email-autoread/actions/workflows/docker-image.yml)
 
 # Email AntAI-Spam
 
