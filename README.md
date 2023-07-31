@@ -2,7 +2,7 @@
 
 # Email AntAI-Spam
 
-Email Auto-reader is a Python tool that uses AI to automatically mark as read any unread Gmail messages that are likely to be junk, and optionally apply a label to them. This streamlines email management tasks by reducing the amount of junk mail you need to manually filter. It can use either a local AI model or the OpenAI API based on your configuration.
+Email AntAI-Spam is a Python tool that uses AI to automatically mark as read any unread Gmail messages that are likely to be junk, and optionally apply a label to them. This streamlines email management tasks by reducing the amount of junk mail you need to manually filter. It can use either a local AI model or the OpenAI API based on your configuration.
 
 ## Running with Docker
 
