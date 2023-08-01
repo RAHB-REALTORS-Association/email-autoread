@@ -1,10 +1,10 @@
-# Email AntAI-Spam
+# ✉️ Email AntAI-Spam 🤖
 
 [![Continuous Integration](https://github.com/RAHB-REALTORS-Association/email-autoread/actions/workflows/python-app.yml/badge.svg)](https://github.com/RAHB-REALTORS-Association/email-autoread/actions/workflows/python-app.yml)
 [![Docker Image](https://github.com/RAHB-REALTORS-Association/email-autoread/actions/workflows/docker-image.yml/badge.svg)](https://github.com/RAHB-REALTORS-Association/email-autoread/actions/workflows/docker-image.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Email AntAI-Spam is a Python tool that uses AI to automatically mark as read any unread Gmail messages that are likely to be junk, and optionally apply a label to them. This streamlines email management tasks by reducing the amount of junk mail you need to manually filter. It can use either a local AI model or the OpenAI API based on your configuration.
+Email AntAI-Spam ✉️🤖 is a Python tool that uses AI to automatically mark as read any unread Gmail messages that are likely to be junk, and optionally apply a label to them. This streamlines email management tasks by reducing the amount of junk mail you need to manually filter. It can use either a local AI model or the OpenAI API based on your configuration.
 
 ## Table of Contents
 - [Running with Docker](#running-with-docker)
